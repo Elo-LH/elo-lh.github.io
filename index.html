@@ -3,108 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loadiiing</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lemonada:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
-      rel="stylesheet"
-    />
+    <title>Eloïse LH - Dev Web</title>
   </head>
   <body>
     <header>
-      <a href="../index.html"
-        ><img
-          id="headerlogo"
-          src="./assets/loadiiing-logo.png"
-          alt="Loadiiing logo"
-      /></a>
-      <div class="burger-menu">
-        <img
-          alt="burger menu icon"
-          id="burger-icon"
-          src="./assets/burger-icon.png"
-        />
-      </div>
-      <nav id="navbar">
-        <a href="/my_vang/presentation/index.html">MY VANG</a>
-        <p>/</p>
-        <a href="/nicolas/index.html">NICOLAS</a>
-        <p>/</p>
-        <a href="/eloise/index.html">ELOISE</a>
-        <p>/</p>
-        <a href="../index.html">TEAM</a>
-      </nav>
+      <a href="#welcome">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </header>
-    <main>
-      <div class="backgroundColor">
-        <div class="baladeur">
-          <img class="imgbaladeur" src="assets/baladeur.png" />
-        </div>
-
-        <div class="cassette">
-          <img class="imgcassette" src="assets/cassette.png" />
-        </div>
-
-        <div class="skate">
-          <img class="imgskate" src="assets/skate.png" />
-        </div>
-
-        <div class="pfenetre">
-          <img class="imgpfenetre" src="assets/pfenetre.png" />
-        </div>
-
-        <div class="gfenetre">
-          <img class="imggfenetre" src="assets/gfenetre.png" />
-        </div>
-
-        <div class="stereo">
-          <img class="imgstereo" src="assets/stereo.png" />
-        </div>
-
-        <div class="eclair">
-          <img class="imgeclair" src="assets/eclair.png" />
-        </div>
-        <div class="vibes1">
-          <img class="imgvibes1" src="assets/vibes.png" />
-        </div>
-        <div class="vibes2">
-          <img class="imgvibes2" src="assets/vibes.png" />
-        </div>
-
-        <div>
-          <p>90's vibes</p>
-        </div>
-
-        <div class="enter"></div>
-        <div class="triangle"></div>
-      </div>
-    </main>
-    <footer class="footer">
-      <p>
-        <img class="logoFooter" src="assets/loadiiing-logo.png" />
-      </p>
-      <section class="lesBox">
-        <div class="boxUn"></div>
-        <div class="boxDeux"></div>
-        <div class="boxTrois"></div>
-        <div class="boxQuatre"></div>
-        <div class="boxCinq"></div>
-        <div class="boxSix"></div>
+    <article>
+      <section id="welcome">
+        <h1>I'm Eloïse, and I make dreams come true !</h1>
+        <h2 class="h2-resume">Web Dev | JavaScript • React • MongoDB • PSQL</h2>
+        <img src="assets/profile-pic.png" />
+        <span class="icon-bubble">Mail</span>
+        <span class="icon-bubble">CodinGames</span>
+        <span class="icon-bubble">LinkedIn</span>
+        <span class="icon-bubble">GitHub</span>
+        <footer class="waves-footer">
+          <div class="wave wave1" style="--i: 1"></div>
+          <div class="wave wave2" style="--i: 2"></div>
+          <div class="wave wave3" style="--i: 3"></div>
+          <div class="wave wave4" style="--i: 4"></div>
+          <div class="wave-gradient"></div>
+        </footer>
       </section>
-      <div id="contenu">
-        <p>go top !</p>
-        <button id="boutonHaut" onclick="scrollToTop()">TOP</button>
-      </div>
-    </footer>
+      <section id="skills">
+        <div class="skills-wrapper">
+          <div class="skill-category">
+            <h2>Front</h2>
+            <span class="skill-bubble"></span>
+            <p>Javascript</p>
+            <span class="skill-bubble"></span>
+            <p>React</p>
+          </div>
+          <div class="skill-category">
+            <h2>Back</h2>
+            <span class="skill-bubble"></span>
+            <p>PHP</p>
+            <span class="skill-bubble"></span>
+            <p>MongoDB</p>
+          </div>
+          <div class="skill-category">
+            <h2>Data</h2>
+            <span class="skill-bubble"></span>
+            <p>PSQL</p>
+            <span class="skill-bubble"></span>
+            <p>JSON</p>
+          </div>
+          <div class="skill-category">
+            <h2>Tools</h2>
+            <span class="skill-bubble"></span>
+            <p>VS Code</p>
+            <span class="skill-bubble"></span>
+            <p>Git/GitHub</p>
+            <span class="skill-bubble"></span>
+            <p>Figma</p>
+          </div>
+        </div>
+        <div class="skills-update">
+          <h2>Latest skills update</h2>
+          <p>Relationnal database certification ....................</p>
+          <p>Relationnal database certification ....................</p>
+          <p>Relationnal database certification ....................</p>
+        </div>
+        <footer class="waves-footer">
+          <div class="wave wave1" style="--i: 1"></div>
+          <div class="wave wave2" style="--i: 2"></div>
+          <div class="wave wave3" style="--i: 3"></div>
+          <div class="wave wave4" style="--i: 4"></div>
+          <div class="wave-gradient"></div>
+        </footer>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-wrapper">
+          <article class="project-card">
+            <h3>Dunder Muffin</h3>
+            <p>Restaurant website</p>
+            <p>HTML/CSS</p>
+            <p>2 people: Lead JS</p>
+            <div class="project-bubble"></div>
+          </article>
+          <article class="project-card">
+            <h3>Dunder Muffin</h3>
+            <p>Restaurant website</p>
+            <p>HTML/CSS</p>
+            <p>2 people: Lead JS</p>
+            <div class="project-bubble"></div>
+          </article>
+          <article class="project-card">
+            <h3>Dunder Muffin</h3>
+            <p>Restaurant website</p>
+            <p>HTML/CSS</p>
+            <p>2 people: Lead JS</p>
+            <div class="project-bubble"></div>
+          </article>
+        </div>
+        <footer class="waves-footer">
+          <div class="wave wave1" style="--i: 1"></div>
+          <div class="wave wave2" style="--i: 2"></div>
+          <div class="wave wave3" style="--i: 3"></div>
+          <div class="wave wave4" style="--i: 4"></div>
+          <div class="wave-gradient"></div>
+        </footer>
+      </section>
+      <section id="contact">
+        <p>If you're interested, please contact me !</p>
+        <h2 class="h2-resume">Web Dev | JavaScript • React • MongoDB • PSQL</h2>
+        <img src="assets/profile-pic.png" />
+        <span class="icon-bubble">Mail</span>
+        <span class="icon-bubble">CodinGames</span>
+        <span class="icon-bubble">LinkedIn</span>
+        <span class="icon-bubble">GitHub</span>
+        <footer class="waves-footer">
+          <div class="wave wave1" style="--i: 1"></div>
+          <div class="wave wave2" style="--i: 2"></div>
+          <div class="wave wave3" style="--i: 3"></div>
+          <div class="wave wave4" style="--i: 4"></div>
+        </footer>
+      </section>
+    </article>
   </body>
-  <script src="index.js"></script>
-  >>>>>>> 94a9cbe9cd46d1c1dfec317d61767c2e154f76cc
+  <script src="./script.js"></script>
 </html>

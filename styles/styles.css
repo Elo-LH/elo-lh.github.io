@@ -1,0 +1,120 @@
+/* colors
+background-blue : #00509D 
+yellow : #FFD500
+light-blue : #CAF0F8
+light blue gradient : linear-gradient(#caf0f8, #00b4d8);
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00509d;
+  font-family: 'Inter';
+  --dark-blue: #00509d;
+  --yellow: #ffd500;
+  --light-blue: #caf0f8;
+  --light-blue-gradient: linear-gradient(#caf0f8, #caf0f8, #00b4d8);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+article {
+  color: white;
+}
+section {
+  min-height: 100vh;
+  position: relative;
+}
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    #ffffff,
+    #caf0f8 25%,
+    #caf0f8 75%,
+    #00b4d8
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.h2-resume {
+  background: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--yellow);
+}
+h2 {
+  background: -webkit-linear-gradient(
+    #ffffff,
+    #caf0f8 25%,
+    #caf0f8 40%,
+    #00b4d8
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Lemonada';
+  font-weight: 400;
+}
+.waves-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../assets/wave-blue.png);
+  background-size: 1000px 100px;
+  animation: animate 4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.25s);
+}
+.wave-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(#48cae4, #00509d);
+}
+.wave1 {
+  z-index: 1000;
+  opacity: 1;
+  background-position-x: 400px;
+}
+.wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  background-position-x: 300px;
+}
+.wave3 {
+  z-index: 998;
+  opacity: 0.2;
+  background-position-x: 200px;
+}
+.wave4 {
+  z-index: 997;
+  opacity: 0.7;
+  background-position-x: 100px;
+}
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
