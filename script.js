@@ -4,19 +4,20 @@ window.addEventListener('DOMContentLoaded', function () {
   let waves3 = document.querySelectorAll('.wave3')
   let waves4 = document.querySelectorAll('.wave4')
 
+  // Moving waves with scroll : parallax effect
   window.addEventListener('scroll', function () {
     let scrollY = window.scrollY
     waves1.forEach((wave1) => {
       wave1.style.backgroundPositionX = 400 + scrollY * 1.2 + 'px'
     })
     waves2.forEach((wave2) => {
-      wave2.style.backgroundPositionX = 400 + scrollY * -1.2 + 'px'
+      wave2.style.backgroundPositionX = 300 + scrollY * -1.2 + 'px'
     })
     waves3.forEach((wave3) => {
-      wave3.style.backgroundPositionX = 400 + scrollY * 1.4 + 'px'
+      wave3.style.backgroundPositionX = 200 + scrollY * 1.4 + 'px'
     })
     waves4.forEach((wave4) => {
-      wave4.style.backgroundPositionX = 400 + scrollY * -1.4 + 'px'
+      wave4.style.backgroundPositionX = 100 + scrollY * -1.4 + 'px'
     })
   })
 })

@@ -3,40 +3,47 @@ background-blue : #00509D
 yellow : #FFD500
 light-blue : #CAF0F8
 light blue gradient : linear-gradient(#caf0f8, #00b4d8);
+yellow-green gradient : linear-gradient(#FDC500, #76C893);
 */
 
+/*---------------------- Global style --------------------------------*/
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* Putting default font-size to 10px */
+  font-size: 0.625em; /* fallback IE8+ */
+  font-size: calc(
+    1em * 0.625
+  ); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #00509d;
   font-family: 'Inter';
+  font-size: 1.6em; /* base font-size is equivalent "14px" */
   --dark-blue: #00509d;
   --yellow: #ffd500;
   --light-blue: #caf0f8;
   --light-blue-gradient: linear-gradient(#caf0f8, #caf0f8, #00b4d8);
-}
-
-header {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: flex-end;
+  --yellow-green-gradient: linear-gradient(#fdc500, #76c893);
 }
 
 article {
   color: white;
 }
 section {
-  min-height: 100vh;
+  min-height: calc(100dvh + 100px);
   position: relative;
 }
+
+/*---------------------- Titles --------------------------------*/
 h1 {
-  font-size: 72px;
+  font-size: clamp(5rem, 7vw, 7.2rem);
   background: -webkit-linear-gradient(
     #ffffff,
     #caf0f8 25%,
@@ -50,6 +57,7 @@ h1 {
   background: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: var(--yellow);
+  font-size: clamp(1.34rem, 3vw, 3rem);
 }
 h2 {
   background: -webkit-linear-gradient(
@@ -63,6 +71,100 @@ h2 {
   font-family: 'Lemonada';
   font-weight: 400;
 }
+
+/*---------------------- Header --------------------------------*/
+
+.header-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+.header-logo {
+  height: 100px;
+}
+.header-logo-link {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.header-nav {
+  justify-self: end;
+  @media screen and (max-width: 900px) {
+    margin-inline: auto;
+  }
+}
+.header-nav a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  padding: 0 0.2em;
+}
+
+/*----------------------  Nav contact --------------------------------*/
+
+.contact-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-inline: auto;
+  color: var(--dark-blue);
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+.icon-bubble {
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  background: var(--yellow-green-gradient);
+  padding: 10px;
+  @media screen and (max-width: 900px) {
+    padding: 5px;
+  }
+}
+.icon-bubble a {
+  display: block;
+  height: clamp(50px, 5vw, 100px);
+}
+.icon-img {
+  width: clamp(50px, 5vw, 100px);
+  height: clamp(50px, 5vw, 100px);
+}
+
+/*---------------------- Welcome page --------------------------------*/
+
+.profile-pic {
+  width: 200px;
+  margin: 5rem;
+  @media screen and (max-width: 900px) {
+    display: block;
+    margin-inline: auto;
+  }
+}
+.welcome-titles {
+  max-width: 100ch;
+}
+.welcome-titles h1 {
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
+}
+.welcome-top-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  @media screen and (max-width: 900px) {
+    display: block;
+    margin: 0 0.4rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/*---------------------- Waves --------------------------------*/
+
 .waves-footer {
   position: absolute;
   bottom: 0;
