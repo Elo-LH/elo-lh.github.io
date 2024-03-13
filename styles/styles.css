@@ -37,7 +37,7 @@ article {
   color: white;
 }
 section {
-  min-height: calc(100dvh + 100px);
+  min-height: calc(100vh + 100px);
   position: relative;
 }
 
@@ -60,6 +60,8 @@ h1 {
   font-size: clamp(1.34rem, 3vw, 3rem);
 }
 h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  margin: 0.2em 0;
   background: -webkit-linear-gradient(
     #ffffff,
     #caf0f8 25%,
@@ -161,6 +163,92 @@ h2 {
     margin: 0 0.4rem;
     margin-bottom: 5rem;
   }
+}
+
+/*---------------------- Skills page --------------------------------*/
+
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 80ch;
+  row-gap: 2rem;
+  @media screen and (max-width: 900px) {
+    margin-top: 5rem;
+  }
+}
+.skill-category {
+  @media screen and (max-width: 900px) {
+    flex: 0 0 50%;
+  }
+}
+.skill-category p {
+  color: var(--light-blue);
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
+}
+
+/* Skills update  */
+
+.skills-update {
+  width: 80%;
+  max-width: 80ch;
+  margin: 3rem auto 0 auto;
+  @media screen and (max-width: 900px) {
+    margin-top: 5rem;
+  }
+}
+.skill-update {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 1rem;
+    width: 95%;
+  }
+}
+.skill-update-link {
+  background: var(--yellow-green-gradient);
+  border-radius: 10px;
+  padding: 1rem;
+  text-decoration: none;
+  flex: 45%;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 1rem;
+    margin-top: 1.6rem;
+    flex: 0 0 auto;
+  }
+}
+.skill-update-infos {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  justify-content: flex-start;
+  flex: 55%;
+  padding-left: 3rem;
+  @media screen and (max-width: 900px) {
+    flex: 0 0 100%;
+    padding-left: 0;
+  }
+}
+.skill-update p {
+  color: var(--light-blue);
+  margin: 0;
+}
+.skill-update-link p {
+  color: var(--dark-blue);
 }
 
 /*---------------------- Waves --------------------------------*/
