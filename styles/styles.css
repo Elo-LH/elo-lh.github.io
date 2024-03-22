@@ -60,7 +60,7 @@ h1 {
   font-size: clamp(1.34rem, 3vw, 3rem);
 }
 h2 {
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(2rem, 3vw, 5rem);
   margin: 0.2em 0;
   background: -webkit-linear-gradient(
     #ffffff,
@@ -251,6 +251,55 @@ h2 {
   color: var(--dark-blue);
 }
 
+/*---------------------- Projects page --------------------------------*/
+#projects h2 {
+  text-align: center;
+}
+.project-card h3 {
+  font-size: clamp(3rem, 4vw, 4rem);
+  text-align: center;
+}
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 200px;
+}
+.project-bubble {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  max-width: 400px;
+  width: 60%;
+  @media screen and (min-width: 800px) {
+    width: 80%;
+  }
+  margin-inline: auto;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  border: var(--yellow) solid 4px;
+}
+
+.project-bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-bubble:hover p {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  font-size: 2.4rem;
+}
+.project-bubble p {
+  text-decoration: none;
+  color: var(--yellow);
+}
+.project-bubble:hover img {
+  filter: brightness(30%);
+}
 /*---------------------- Waves --------------------------------*/
 
 .waves-footer {
