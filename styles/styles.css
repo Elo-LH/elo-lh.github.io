@@ -327,6 +327,9 @@ h2 {
 
 /*---------------------- Contact page --------------------------------*/
 
+#contact {
+  min-height: 100vh;
+}
 #contact .very-big-title,
 #contact h2 {
   margin: 0.6rem;
@@ -334,12 +337,24 @@ h2 {
 #contact .contact-paragraph {
   max-width: 60ch;
   margin-inline: auto;
+  padding: 0 0.6rem;
 }
 .paragraph-wrapper {
   padding: 5rem 0;
 }
 #contact .contact-nav {
   padding-bottom: calc(2rem + 100px);
+}
+.contact-top-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+    margin: 0 0.4rem;
+  }
 }
 
 .copyright {
