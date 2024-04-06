@@ -42,8 +42,9 @@ section {
 }
 
 /*---------------------- Titles --------------------------------*/
-h1 {
+.very-big-title {
   font-size: clamp(5rem, 7vw, 7.2rem);
+  font-weight: bold;
   background: -webkit-linear-gradient(
     #ffffff,
     #caf0f8 25%,
@@ -110,6 +111,8 @@ h2 {
   width: 60%;
   margin-inline: auto;
   color: var(--dark-blue);
+  padding-bottom: 5rem;
+  padding-top: 2rem;
   @media screen and (max-width: 900px) {
     width: 100%;
     justify-content: space-evenly;
@@ -254,10 +257,22 @@ h2 {
 /*---------------------- Projects page --------------------------------*/
 #projects h2 {
   text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 0;
+  @media screen and (max-width: 900px) {
+    margin-top: 3rem;
+  }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 .project-card h3 {
   font-size: clamp(3rem, 4vw, 4rem);
-  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 .projects-wrapper {
   display: flex;
@@ -265,21 +280,30 @@ h2 {
   justify-content: space-evenly;
   padding-bottom: 200px;
 }
+.project-p-wrapper {
+  width: 80%;
+  margin-bottom: 5rem;
+}
+.project-p-wrapper p {
+  text-align: left;
+}
 .project-bubble {
   position: relative;
   aspect-ratio: 1 / 1;
   max-width: 400px;
-  width: 60%;
-  @media screen and (min-width: 800px) {
-    width: 80%;
-  }
-  margin-inline: auto;
   border-radius: 50%;
   display: flex;
   overflow: hidden;
-  border: var(--yellow) solid 4px;
 }
-
+.bubble-border {
+  border-radius: 50%;
+  width: 80%;
+  background: var(--yellow-green-gradient);
+  padding: 10px;
+  @media screen and (max-width: 900px) {
+    padding: 5px;
+  }
+}
 .project-bubble img {
   width: 100%;
   height: 100%;
@@ -300,6 +324,49 @@ h2 {
 .project-bubble:hover img {
   filter: brightness(30%);
 }
+
+/*---------------------- Contact page --------------------------------*/
+
+#contact {
+  min-height: 100vh;
+}
+#contact .very-big-title,
+#contact h2 {
+  margin: 0.6rem;
+}
+#contact .contact-paragraph {
+  max-width: 60ch;
+  margin-inline: auto;
+  padding: 0 0.6rem;
+}
+.paragraph-wrapper {
+  padding: 5rem 0;
+}
+#contact .contact-nav {
+  padding-bottom: calc(2rem + 100px);
+}
+.contact-top-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+    margin: 0 0.4rem;
+  }
+}
+
+.copyright {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 100000;
+  color: var(--dark-blue);
+}
 /*---------------------- Waves --------------------------------*/
 
 .waves-footer {
@@ -308,6 +375,13 @@ h2 {
   left: 0;
   width: 100%;
   height: 200px;
+}
+.waves-footer-last {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
 }
 .wave {
   position: absolute;
