@@ -86,6 +86,7 @@ h2 {
   height: 100px;
 }
 .header-logo-link {
+  z-index: 100;
   @media screen and (max-width: 900px) {
     display: none;
   }
@@ -113,7 +114,31 @@ h2 {
   font-size: clamp(1.8rem, 4vw, 3rem);
   padding: 0.4em clamp(0.8rem, 5vw, 1.4rem);
 }
-
+.wave-tab-left {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 1;
+  height: 150px;
+  animation: animate 4s ease-in-out infinite;
+  animation-delay: 1.8s;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.wave-tab-left-delay {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 1;
+  height: 150px;
+  animation: animate 4s ease-in-out infinite;
+  opacity: 30%;
+  animation-delay: 3s;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
 /*----------------------  Nav contact --------------------------------*/
 
 .contact-nav {
