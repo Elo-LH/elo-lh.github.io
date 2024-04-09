@@ -37,7 +37,7 @@ article {
   color: white;
 }
 section {
-  min-height: calc(100vh + 100px);
+  min-height: 100vh;
   position: relative;
 }
 
@@ -86,6 +86,7 @@ h2 {
   height: 100px;
 }
 .header-logo-link {
+  z-index: 100;
   @media screen and (max-width: 900px) {
     display: none;
   }
@@ -96,13 +97,48 @@ h2 {
     margin-inline: auto;
   }
 }
-.header-nav a {
-  color: var(--yellow);
+.inactive-tab {
+  background: -webkit-linear-gradient(#fdc500, #76c893);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  padding: 0 0.2em;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  padding: 0.4em clamp(0.8rem, 5vw, 1.4rem);
 }
-
+.active-tab {
+  background: url(../assets/onglet.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  padding: 0.4em clamp(0.8rem, 5vw, 1.4rem);
+}
+.wave-tab-left {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 1;
+  height: 150px;
+  animation: animate 4s ease-in-out infinite;
+  animation-delay: 1.8s;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.wave-tab-left-delay {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 1;
+  height: 150px;
+  animation: animate 4s ease-in-out infinite;
+  opacity: 30%;
+  animation-delay: 3s;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
 /*----------------------  Nav contact --------------------------------*/
 
 .contact-nav {
@@ -111,7 +147,7 @@ h2 {
   width: 60%;
   margin-inline: auto;
   color: var(--dark-blue);
-  padding-bottom: 5rem;
+  padding-bottom: 120px;
   padding-top: 2rem;
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -341,6 +377,7 @@ h2 {
 }
 .paragraph-wrapper {
   padding: 5rem 0;
+  text-align: justify;
 }
 #contact .contact-nav {
   padding-bottom: calc(2rem + 100px);
@@ -367,6 +404,39 @@ h2 {
   z-index: 100000;
   color: var(--dark-blue);
 }
+.paragraph-wrapper a {
+  background: -webkit-linear-gradient(#fdc500, #76c893);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+.paragraph-wrapper h3 {
+  text-align: center;
+}
+.paragraph-wrapper strong {
+  color: var(--yellow);
+  font-weight: normal;
+  font-style: italic;
+}
+.paragraph-wrapper blockquote {
+  max-width: 60ch;
+  text-align: center;
+  margin: 3rem auto;
+}
+.meme-img {
+  max-width: 600px;
+  margin-bottom: 5rem;
+}
+.meme-img img {
+  width: 100%;
+}
+.contact-bot-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
 /*---------------------- Waves --------------------------------*/
 
 .waves-footer {
@@ -374,7 +444,7 @@ h2 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 100px;
 }
 .waves-footer-last {
   position: absolute;
@@ -394,14 +464,7 @@ h2 {
   animation: animate 4s ease-in-out infinite;
   animation-delay: calc(var(--i) * 0.25s);
 }
-.wave-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(#48cae4, #00509d);
-}
+
 .wave1 {
   z-index: 1000;
   opacity: 1;
