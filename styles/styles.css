@@ -27,6 +27,7 @@ body {
   font-family: 'Inter';
   font-size: 1.6em; /* base font-size is equivalent "14px" */
   --dark-blue: #00509d;
+  --wave-blue: #48cae4;
   --yellow: #ffd500;
   --light-blue: #caf0f8;
   --light-blue-gradient: linear-gradient(#caf0f8, #caf0f8, #00b4d8);
@@ -315,6 +316,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-bottom: 200px;
+  margin-top: 5rem;
 }
 .project-p-wrapper {
   width: 80%;
@@ -340,25 +342,63 @@ h2 {
     padding: 5px;
   }
 }
+.project-bubble a {
+  text-decoration: none;
+}
+.project-bubble a:visited {
+  text-decoration: none;
+}
 .project-bubble img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project-bubble:hover p {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -100%);
+.project-bubble:hover .see-project {
+  transform: translate(0%, -300%);
+  transition: all 3s ease;
+}
+
+.see-project {
+  position: relative;
   font-size: 2.4rem;
+  color: var(--dark-blue);
+  text-align: center;
+  z-index: 1000000;
 }
-.project-bubble p {
-  text-decoration: none;
-  color: var(--yellow);
+
+.test-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  /* -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0); */
 }
-.project-bubble:hover img {
-  filter: brightness(30%);
+.test-wave {
+  background-color: var(--wave-blue);
+  position: absolute;
+  top: 110%;
+  height: 200%;
+  width: 200%;
+  border-radius: 38%;
+  left: -50%;
+  transform: rotate(360deg);
+  transition: all 5s ease;
+  animation: test-wave 30s linear infinite;
+}
+@keyframes test-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+.test-circle:hover .test-wave {
+  top: 50%;
 }
 
 /*---------------------- Contact page --------------------------------*/
