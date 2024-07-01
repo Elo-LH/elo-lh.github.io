@@ -332,6 +332,7 @@ h2 {
   width: 80%;
   max-width: 80ch;
   margin: 3rem auto 0 auto;
+  padding-bottom: calc(2rem + 100px);
   @media screen and (max-width: 900px) {
     margin-top: 5rem;
   }
@@ -344,6 +345,7 @@ h2 {
   align-items: center;
   margin-bottom: 2rem;
   margin-inline: auto;
+
   @media screen and (max-width: 900px) {
     margin-bottom: 1rem;
     width: 95%;
@@ -452,7 +454,7 @@ h2 {
 }
 .project-bubble:hover .see-project {
   transform: translate(0%, -300%);
-  transition: all 3s ease;
+  transition: all 2s ease;
 }
 
 .see-project {
@@ -483,7 +485,7 @@ h2 {
   border-radius: 38%;
   left: -50%;
   transform: rotate(360deg);
-  transition: all 5s ease;
+  transition: all 3s ease;
   animation: test-wave 30s linear infinite;
 }
 @keyframes test-wave {
